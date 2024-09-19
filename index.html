@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Application Form</title>
+</head>
+<body>
+    <h1>Bank Application Form</h1>
+    <form action="/submit" method="post">
+     
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required><br><br>
+
+      
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+     
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+     
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <label for="accountType">Account Type:</label>
+        <select id="accountType" name="accountType">
+            <option value="savings">Savings</option>
+            <option value="current">Current</option>
+            <option value="fixed">Fixed Deposit</option>
+        </select><br><br>
+
+       
+        <label for="income">Annual Income:</label>
+        <input type="range" id="income" name="income" min="0" max="1000000" step="10000" oninput="incomeOutput.value = income.value">
+        <output name="incomeOutput" id="incomeOutput">500000</output><br><br>
+
+        <label for="tnc">Agree to Terms and Conditions:</label>
+        <input type="checkbox" id="tnc" name="tnc" required><br><br>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+
+
+        <input type="submit" value="Submit">
+ 
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
